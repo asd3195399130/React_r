@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    width: 100%;
+    height: 500px;
+}
+
+.table_header {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+}
+
+.table_top {
+    width: 100%;
+    height: 80px;
+    background-color: #248067;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 25px;
+}
+
+.table_incom,
+.table_num,
+.table_usernum,
+.table_pageview {
+    width: 265px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    h2 {
+        font-size: 16px;
+        color: #ffffff;
+        margin-top: 5px;
+    }
+
+    p {
+        font-size: 16px;
+        color: #ffffff;
+        margin-top: 5px;
+    }
+}
+
+.table_incom {
+    background: rgb(252, 134, 117);
+    border: none;
+
+}
+
+.table_num {
+    background: rgb(90, 182, 223);
+}
+
+.table_usernum {
+    background: rgb(101, 206, 167);
+}
+
+.table_pageview {
+    background: rgb(235, 200, 94);
+}

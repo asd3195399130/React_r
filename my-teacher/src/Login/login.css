@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    width: 100%;
+    height: 100vh;
+    background: url("https://img.zcool.cn/community/0179f45d1ca689a8012076406afd1b.jpg@2o.jpg")no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.header {
+    width: 800px;
+    height: 500px;
+    background-color: aliceblue;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    opacity: 1;
+    border-radius: 15px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header_left {
+    float: left;
+    width: 50%;
+    height: 100%;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    background: url("https://img.zcool.cn/community/010cac5a44a121a801206ed34b286d.gif")no-repeat;
+    background-size: cover;
+}
+
+.header_right {
+    float: right;
+    width: 50%;
+    height: 100%;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    background: #ffffff;
+    text-align: center;
+    line-height: 85px;
+}.header_right h1{
+    margin-bottom: 15px;
+    text-align: center;
+}
+.header::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+#components-form-demo-normal-login .login-form {
+    max-width: 300px;
+    width: 300px;
+}
+
+#components-form-demo-normal-login .login-form-forgot {
+    float: right;
+}
+
+#components-form-demo-normal-login .ant-col-rtl .login-form-forgot {
+    float: left;
+}
+
+#components-form-demo-normal-login .login-form-button {
+    width: 100%;
+}
+.Codename{
+    width: 65px;
+    height: 35px;
+    border: 5px solid #ccc;
+    line-height: 35px;
+    background: red;
+}
