@@ -1,9 +1,9 @@
 import './App.css';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
-  Navigate
+  Navigate,
 } from "react-router-dom";
 import Login from "./Login/login";
 import Home from "./Home/Home";

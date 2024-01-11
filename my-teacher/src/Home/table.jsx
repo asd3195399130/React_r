@@ -7,7 +7,7 @@ function TableView() {
   let [list,setList] = useState("")
    const treeview = () => {
      axios
-       .get("http://47.94.4.201/index.php/index/index/getDatas")
+       .get("https://www.zzgoodqc.cn/index.php/index/index/getDatas")
        .then((res) => {
          setData(res.data.data.arr);
          console.log(setData(res.data.data.arr));

@@ -5,12 +5,42 @@
 }
 .teach_header{
   width: 100%;
-  height: 600px;
+  height: 80vh;
   background: blueviolet;
   .teach_header_top{
     width: 100%;
     height: 65px;
     background-color: #ffffff;
+    padding-top: 15px;
+    padding-left: 15px;
     margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   }
+  .teach_center{
+    width: 100%;
+    height: 550px;
+    background: coral;
+    position: relative;
+    top: 65px;
+  }
+}
+.site-description-item-profile-wrapper {
+  margin-bottom: 7px;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+  line-height: 1.5715;
+}
+
+.ant-drawer-body p.site-description-item-profile-p {
+  display: block;
+  margin-bottom: 16px;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 16px;
+  line-height: 1.5715;
+}
+
+.site-description-item-profile-p-label {
+  display: inline-block;
+  margin-right: 8px;
+  color: rgba(0, 0, 0, 0.85);
 }

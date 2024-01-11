@@ -14,7 +14,7 @@ function Login(props) {
   // 验证码
   function Code() {
     axios
-      .get("http://47.94.4.201/index.php/index/index/getcode")
+      .get("https://www.zzgoodqc.cn/index.php/index/index/getcode")
       .then((res) => {
         console.log(res.data.msg);
         setCodeImageUrl(res.data.msg);
@@ -26,7 +26,7 @@ function Login(props) {
 //    账户和密码
   const onFinish = (values) => {
     console.log(values);
-        axios.post("http://47.94.4.201/index.php/index/index/login",values).then(()=>{
+        axios.post("https://www.zzgoodqc.cn/index.php/index/index/login",values).then(()=>{
           naviagte("/home/table")
         });
   };

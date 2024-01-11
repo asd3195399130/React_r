@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
@@ -11,7 +11,7 @@ import {
 import { Link, Outlet } from "react-router-dom";
 import { Layout, Menu, Button, theme, Modal } from "antd";
 import "./Home.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,useLocation } from "react-router-dom";
 function Home(props) {
   const naviagte =  new useNavigate()
   const { Header, Sider, Content } = Layout;
@@ -20,6 +20,8 @@ function Home(props) {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
   const [collapsed, setCollapsed] = useState(false);
+   const location = useLocation().pathname;
+   const [selectedKey, setSelectedKey] = useState(location);
   const items = [
     {
       key: "1",
@@ -39,6 +41,9 @@ function Home(props) {
       label: "nav 3",
     },
   ];
+    useEffect(() => {
+      setSelectedKey(location);
+    }, [location]);
   // 退出登录
   const exit=()=>{
      confirm({
@@ -66,7 +71,7 @@ function Home(props) {
           <div className="demo-logo-vertical">
             <h1>后台管理列表</h1>
           </div>
-          <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
+          <Menu theme="dark" mode="inline" defaultSelectedKeys={[selectedKey]}>
             {items.map((item) => (
               <Menu.Item key={item.key} icon={item.icon}>
                 <Link to={item.to}>{item.label}</Link>
@@ -90,8 +95,8 @@ function Home(props) {
                 height: 64,
               }}
             />
-            <Button type="text" icon={<PoweroffOutlined  />} onClick={exit}>
-             退出登录
+            <Button type="text" icon={<PoweroffOutlined />} onClick={exit}>
+              退出登录
             </Button>
           </Header>
           <Content
